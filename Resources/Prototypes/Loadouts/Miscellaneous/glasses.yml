@@ -17,12 +17,31 @@
       department: Cargo
       time: 36000 #10 hours of being a space trucker
 
+- type: loadoutEffectGroup
+  id: GigaGlassesTimer
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Cargo
+      time: 36000 
+
+
 # Basic options
 # Glasses
 - type: loadout
   id: Glasses
   equipment:
     eyes: ClothingEyesGlasses
+
+# Jaba
+- type: loadout
+  id: GlassesGiga
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: GigaGlassesTimer
+  equipment:
+    eyes: ClothingEyesGlassesGarGiga
 
 # Special options
 # Jamjar
